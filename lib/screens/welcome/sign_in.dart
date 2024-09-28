@@ -33,6 +33,12 @@ class _SignInFormState extends State<SignInForm> {
               controller: _emailController,
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(labelText: 'Email'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your email';
+                }
+                return null;
+              },
             ),
             const SizedBox(height: 16.0),
 
@@ -41,6 +47,12 @@ class _SignInFormState extends State<SignInForm> {
               controller: _passwordController,
               obscureText: true,
               decoration: const InputDecoration(labelText: 'Password'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter a password';
+                }
+                return null;
+              },
             ),
             const SizedBox(height: 16.0),
 
@@ -48,7 +60,15 @@ class _SignInFormState extends State<SignInForm> {
 
             // submit button
             StyledButton(
-              onPressed: () async {},
+              onPressed: () async {
+                if (_formKey.currentState!.validate()) {
+                  final email = _emailController.text.trim();
+                  final password = _passwordController.text.trim();
+
+                  print(email);
+                  print(password);
+                }
+              },
               child: const StyledButtonText('Sign In'),
             ),
           ],
