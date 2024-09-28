@@ -1,3 +1,5 @@
+import 'package:flutter_auth_tut/screens/welcome/sign_in.dart';
+import 'package:flutter_auth_tut/screens/welcome/sign_up.dart';
 import 'package:flutter_auth_tut/shared/styled_text.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +11,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +26,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               StyledHeading('Welcome.'),
-        
-              // sign up screen
 
+              // sign up screen
+              SignUpForm(),
 
               // sign in screen
-            ]
-          )
+              SignInForm(),
+            ],
+          ),
         ),
       ),
     );
