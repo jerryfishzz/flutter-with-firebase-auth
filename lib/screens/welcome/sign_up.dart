@@ -16,6 +16,8 @@ class _SignUpFormState extends State<SignUpForm> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  String? _errorFeedback;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -61,6 +63,11 @@ class _SignUpFormState extends State<SignUpForm> {
             const SizedBox(height: 16.0),
 
             // error feedback
+            if (_errorFeedback != null)
+              Text(
+                _errorFeedback!,
+                style: const TextStyle(color: Colors.red),
+              ),
 
             // submit button
             StyledButton(
@@ -72,6 +79,11 @@ class _SignUpFormState extends State<SignUpForm> {
                   final user = await AuthService.signUp(email, password);
 
                   // error feedback
+                  if (user == null) {
+                    setState(() {
+                      _errorFeedback = 'Could not sign up with those details';
+                    });
+                  }
                 }
               },
               child: const StyledButtonText('Sign Up'),
