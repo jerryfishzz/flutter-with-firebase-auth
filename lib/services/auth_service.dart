@@ -35,4 +35,21 @@ class AuthService {
   static Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }
+
+  // sign users in
+  static Future<AppUser?> signIn(String email, String password) async {
+    try {
+      final UserCredential credential = await _firebaseAuth
+          .signInWithEmailAndPassword(email: email, password: password);
+      final User? user = credential.user;
+
+      if (user != null) {
+        return AppUser(uid: user.uid, email: user.email!);
+      }
+
+      return null;
+    } catch (e) {
+      return null;
+    }
+  }
 }
