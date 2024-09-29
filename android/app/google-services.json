@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "32278429449",
+    "project_id": "flutter-masterclass-930f4",
+    "storage_bucket": "flutter-masterclass-930f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32278429449:android:f546a6150940389b7d5dd8",
+        "android_client_info": {
+          "package_name": "com.example.flutter_auth_tut"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcv0yiRp7vwGQP16IVJD3CcebsX888-cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32278429449:android:04e9258bea08dc667d5dd8",
+        "android_client_info": {
+          "package_name": "com.example.flutter_rp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcv0yiRp7vwGQP16IVJD3CcebsX888-cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
