@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             if (value == null) {
               return const WelcomeScreen();
             }
-            return const ProfileScreen();
+            return ProfileScreen(user: value);
           },
           error: (error, _) => Scaffold(
             body: Center(
