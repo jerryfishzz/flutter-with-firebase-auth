@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth_tut/models/app_user.dart';
-import 'package:flutter_auth_tut/providers/auth_proviider.dart';
+import 'package:flutter_auth_tut/providers/auth_provider.dart';
 import 'package:flutter_auth_tut/screens/profile/profile.dart';
 import 'package:flutter_auth_tut/screens/welcome/welcome.dart';
 
